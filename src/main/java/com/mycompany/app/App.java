@@ -10,9 +10,13 @@ public class App {
     public App() {
     }
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         System.out.println(new App().getMessage());
-        Thread.sleep(120000);
+        try {
+            Thread.sleep(120000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         System.out.println("Terminado...");
     }
 
